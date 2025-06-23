@@ -145,3 +145,18 @@ Si encuentras problemas durante la instalación, aquí te dejamos algunas soluci
 - **Problemas con el servidor de desarrollo**: Asegúrate de que el puerto `8000` no esté siendo usado por otro proceso.
 
 ---
+
+### Documentación de la API
+
+La aplicación expone una API en formato JSON que permite interactuar con los datos de productos y categorías. Puedes acceder a la documentación visual de la API en Swagger visitando:
+
+http://localhost:8000/api/documentation
+
+
+En esta página encontrarás información sobre tres endpoints disponibles:
+
+- **Listado completo de productos:** Obtiene todos los productos registrados.  
+- **Consulta de producto:** Permite obtener la información detallada de un producto específico.  
+- **Productos por categorías:** Muestra los productos agrupados o filtrados según sus categorías.  
+
+Esta API facilita la integración con otras aplicaciones o sistemas que necesiten consultar o manipular datos del inventario.
