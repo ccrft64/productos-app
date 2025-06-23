@@ -117,6 +117,31 @@
    Abre tu navegador y visita http://localhost:8000. Si todo ha ido bien, tu aplicación debería estar en funcionamiento.
 
 #### 12. Acceder a la Aplicación
-   Ahora puedes acceder a tu aplicación desde el navegador en la dirección http://localhost:8000.
 
-   Si todo está configurado correctamente, deberías ver la interfaz de la aplicación con Laravel Jetstream y Vue funcionando.
+- Ahora puedes acceder a tu aplicación desde el navegador en la dirección `http://localhost:8000`.
+- Al abrir esta dirección, verás la **página de inicio**, donde puedes **iniciar sesión** si ya tienes una cuenta o **registrarte** como nuevo usuario.
+- Puedes registrarte como un **usuario regular** o como un **usuario administrador** (según cómo se gestione el rol en la base de datos).
+- Una vez que inicies sesión, serás dirigido a una **página principal** con enlaces que te llevarán a las secciones de **Productos** y **Categorías**.
+
+---
+
+### ¿Qué se puede hacer en la aplicación?
+
+Desde el panel principal, podrás:
+
+- Acceder a la sección de **Productos**, donde puedes **agregar**, **editar**, **ver** y **eliminar** productos de tu inventario.
+- Ir a la sección de **Categorías**, donde también puedes **crear**, **modificar** o **eliminar** categorías que organizan tus productos.
+
+Todo está diseñado para ser fácil de usar, de manera que cualquier persona, incluso sin conocimientos técnicos, pueda gestionar la información de productos y categorías de forma clara y rápida.
+
+---
+
+### Solución de Problemas
+
+Si encuentras problemas durante la instalación, aquí te dejamos algunas soluciones comunes:
+
+- **Error: "Base de datos no encontrada"**: Asegúrate de que el nombre de la base de datos en `.env` coincida exactamente con la que creaste en **phpMyAdmin**.
+- **Error: "Comando no reconocido"**: Verifica que hayas instalado correctamente **Composer** y **Node.js**.
+- **Problemas con el servidor de desarrollo**: Asegúrate de que el puerto `8000` no esté siendo usado por otro proceso.
+
+---
