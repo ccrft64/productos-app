@@ -1,66 +1,122 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Guía de Instalación Local - Laravel Jetstream con Inertia.js y Vue
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+¡Bienvenido a la plataforma centralizada de gestión de productos y categorías! Esta guía te ayudará a instalar y ejecutar la aplicación localmente en tu máquina utilizando **XAMPP**. Sigue los pasos a continuación para que puedas configurar tu entorno de desarrollo sin problemas.
 
-## About Laravel
+### Requisitos Previos
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+1. **XAMPP** (Servidor Apache, MySQL, PHP)
+2. **Git Bash** (para gestionar repositorios y ejecutar comandos)
+3. **Composer** (gestor de dependencias de PHP)
+4. **Node.js y npm** (para gestionar dependencias de JavaScript)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Pasos de Instalación
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+#### 1. Instalación de XAMPP
 
-## Learning Laravel
+- Dirígete a la página oficial de [XAMPP](https://www.apachefriends.org/es/index.html) y descarga la versión adecuada para tu sistema operativo (Windows, Linux o macOS).
+- Ejecuta el instalador y sigue las instrucciones en pantalla para completar la instalación.
+- Una vez instalado, abre **XAMPP Control Panel** y enciende los servicios **Apache** y **MySQL**.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+#### 2. Instalación de Git Bash
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- Descarga **Git Bash** desde la página oficial: [Git for Windows](https://git-scm.com/download/win).
+- Ejecuta el instalador y sigue las instrucciones predeterminadas.
+- Durante la instalación, asegúrate de seleccionar la opción para agregar **Git Bash** al menú contextual de tu explorador de archivos.
+- Una vez instalado, abre **Git Bash**.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+#### 3. Clonar el Repositorio
 
-## Laravel Sponsors
+1. Abre **Git Bash** y navega al directorio donde deseas instalar tu aplicación.
+2. Ejecuta el siguiente comando para clonar tu repositorio:
+   ```bash
+   git clone https://github.com/ccrft64/productos-app.git
+   ```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+3. Después de clonar el repositorio, entra en la carpeta del proyecto:
 
-### Premium Partners
+   ```bash
+   cd productos-app
+   ```
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+#### 4. Instalación de Dependencias de PHP
+   Instala Composer, que es el gestor de dependencias de PHP. Si no lo tienes instalado, puedes descargarlo desde composer.org.
 
-## Contributing
+   En Git Bash, ejecuta el siguiente comando dentro del directorio de tu proyecto para instalar las dependencias de PHP:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+   ```bash
+   composer install
+   ```
 
-## Code of Conduct
+   Este comando descargará todas las dependencias necesarias definidas en el archivo composer.json.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+#### 5. Configuración del Entorno (Archivo .env)
+   Copia el archivo .env.example y renómbralo a .env:
 
-## Security Vulnerabilities
+   ```bash
+   cp .env.example .env
+   ```
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+   Abre el archivo .env en un editor de texto (por ejemplo, Visual Studio Code) y ajusta las configuraciones de base de datos. Utiliza los siguientes valores para MySQL:
 
-## License
+   DB_CONNECTION=mysql
+   DB_HOST=127.0.0.1
+   DB_PORT=3306
+   DB_DATABASE=nombre_de_tu_base_de_datos
+   DB_USERNAME=root
+   DB_PASSWORD=
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+   Nota: Si usas un nombre de base de datos diferente, cambia DB_DATABASE por el nombre que desees.
+
+#### 6. Crear la Base de Datos en MySQL
+   Accede a phpMyAdmin desde el panel de control de XAMPP (generalmente en http://localhost/phpmyadmin).
+
+   Crea una nueva base de datos con el nombre que has puesto en el archivo .env (en DB_DATABASE).
+
+#### 7. Generar las Claves de Aplicación
+   En Git Bash, ejecuta el siguiente comando para generar las claves de la aplicación:
+
+   ```bash
+   php artisan key:generate
+   ```
+
+#### 8. Migraciones y Seeders
+   Para crear las tablas en la base de datos, ejecuta las migraciones:
+
+   ```bash
+   php artisan migrate
+   ```
+
+   Si deseas poblar la base de datos con datos de prueba, puedes ejecutar:
+
+   ```bash
+   php artisan db:seed
+   ```
+
+#### 9. Instalación de Dependencias de JavaScript
+   Si aún no tienes Node.js y npm instalados, descárgalos desde nodejs.org.
+
+   En Git Bash, instala las dependencias de JavaScript con el siguiente comando:
+
+   ```bash
+   npm install
+   ```
+
+#### 10. Compilación de Assets
+   Para compilar los archivos JavaScript y CSS de Vue e Inertia.js, ejecuta:
+
+   ```bash
+   npm run dev
+   ```
+#### 11. Servir la Aplicación
+   Para iniciar el servidor de desarrollo de Laravel, ejecuta:
+
+   ```bash
+   php artisan serve
+   ```
+
+   Abre tu navegador y visita http://localhost:8000. Si todo ha ido bien, tu aplicación debería estar en funcionamiento.
+
+#### 12. Acceder a la Aplicación
+   Ahora puedes acceder a tu aplicación desde el navegador en la dirección http://localhost:8000.
+
+   Si todo está configurado correctamente, deberías ver la interfaz de la aplicación con Laravel Jetstream y Vue funcionando.
