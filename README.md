@@ -58,12 +58,12 @@
 
    Abre el archivo .env en un editor de texto (por ejemplo, Visual Studio Code) y ajusta las configuraciones de base de datos. Utiliza los siguientes valores para MySQL:
 
-   DB_CONNECTION=mysql
-   DB_HOST=127.0.0.1
-   DB_PORT=3306
-   DB_DATABASE=nombre_de_tu_base_de_datos
-   DB_USERNAME=root
-   DB_PASSWORD=
+   - DB_CONNECTION=mysql
+   - DB_HOST=127.0.0.1
+   - DB_PORT=3306
+   - DB_DATABASE=nombre_de_tu_base_de_datos
+   - DB_USERNAME=root
+   - DB_PASSWORD=
 
    Nota: Si usas un nombre de base de datos diferente, cambia DB_DATABASE por el nombre que desees.
 
